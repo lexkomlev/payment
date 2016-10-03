@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+dist/
+bld/
+
+# boilerplate shit
+public/
+config/
+
+npm-debug.log
+prepros.cfg
