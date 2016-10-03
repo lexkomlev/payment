@@ -12,7 +12,7 @@ module.exports = {
 	target: 'web',
 
 	output: {
-		path: path.join(__dirname, '../dist/'),
+		path: path.join(__dirname, './dist/'),
 		filename: '[name].js',
 		publicPath: '/'
 	},
@@ -21,8 +21,8 @@ module.exports = {
 		loaders: [
 			{
 				test: /\.jsx?$/,
-				loaders: ['react-hot', 'babel'],
-				include: path.join(__dirname, '../src'),
+				loader: 'babel',
+				include: path.join(__dirname, './src'),
 			},
 			{
 				test: /\.css$/,
@@ -31,7 +31,7 @@ module.exports = {
 			{
 				test: /\.less$/,
 				loader: 'style!css!less',
-				include: path.join(__dirname, '../src')
+				include: path.join(__dirname, './src')
 			},
 			{
 				test: /\.svg$/,
