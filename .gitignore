@@ -5,7 +5,6 @@ bld/
 
 # boilerplate shit
 public/
-config/
 
 npm-debug.log
 prepros.cfg

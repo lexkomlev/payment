@@ -1,0 +1,24 @@
+{
+  "tripInfo": [
+    {
+      "tripDepartureStationName": "Москва Ярославская (Ярославский вокзал)",
+      "tripArrivalStationName": "Ярославль-Главный",
+      "tripDepartureDate": "13 октября 2016, чт",
+      "tripDepartureTime": "07:35",
+      "showDepartureTimezone": 0,
+      "tripArrivalDate": "13 октября 2016, чт",
+      "tripArrivalTime": "10:53",
+      "showArrivalTimezone": 0,
+      "tripTravelTime": 11880,
+      "trainName": null,
+      "trainNumber": "102Я",
+      "trainDepartureCityName": "Москва",
+      "trainArrivalCityName": "Ярославль",
+      "showCarInfo": true,
+      "carInfo": "любой, общий",
+      "seatsInfo": "одно&nbsp;место, любое расположение",
+      "hasEregInfo": true,
+      "isEregPossible": true
+    }
+  ]
+}

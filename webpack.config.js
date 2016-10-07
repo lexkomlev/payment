@@ -22,35 +22,39 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
 				loader: 'babel',
-				include: path.join(__dirname, './src'),
+				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
 			},
 			{
 				test: /\.css$/,
-				loader: 'style!css'
+				loader: 'style!css',
+				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
 			},
 			{
 				test: /\.less$/,
 				loader: 'style!css!less',
-				include: path.join(__dirname, './src')
+				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
 			},
 			{
 				test: /\.svg$/,
-				loader: 'svg-url'
+				loader: 'svg-url',
+				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
 			},
 			{
 				test: /\.(png|jpg|jpeg|gif)$/,
-				loader: "url"
+				loader: "url",
+				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
 			},
 			{
 				test: /\.json$/,
-				loader: 'json'
+				loader: 'json',
+				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
 			}
 		]
 	},
 
 	resolve: {
 		extensions: ['', '.js', '.jsx', '.css', '.less', '.json'],
-		modulesDirectories: ['node_modules']
+		modulesDirectories: ['node_modules', 'components']
 	},
 
 	plugins: [

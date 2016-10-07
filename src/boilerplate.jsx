@@ -1,38 +1,31 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
-import { Provider } from 'react-redux';
+import { createStore, compose, applyMiddleware } from 'redux';
+import { Provider, connect } from 'react-redux';
 import reduxElm from 'redux-elm';
 
+import { IntlProvider } from 'react-intl';
 
 
 export default (containerDomId, View, updater) => {
 
 	const storeFactory = compose(
 		reduxElm,
-		applyMiddleware(
-			routerMiddleware(browserHistory)
-		),
 		window.devToolsExtension ? window.devToolsExtension() : f => f
 	)(createStore);
 
+	const store = storeFactory(updater);
 
-	const reducers = combineReducers({
-		root: updater,
-		routing: routerReducer
-	});
-
-	const store = storeFactory(reducers);
-
-	const history = syncHistoryWithStore(browserHistory, store);
+	const ConnectedView = connect(appState => ({
+		model: appState
+	}))(View);
 
 	render((
-		<Provider store={store}>
-			<View
-				history={history}
-				dispatch={store.dispatch}
-			/>
-		</Provider>
+		<IntlProvider locale="ru">
+			<Provider store={store}>
+				<ConnectedView />
+			</Provider>
+		</IntlProvider>
 	), document.getElementById(containerDomId));
 
 }
