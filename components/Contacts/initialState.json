@@ -4,9 +4,17 @@
   "email": "",
   "mobile": "",
 
-  "checkboxes": {
-    "isSubscribedOnSms": true,
-    "needDocuments": true
-  }
+  "checkboxes": [
+    {
+      "value": "isSubscribedOnSms",
+      "label": "Я подписан на смс без регистрации",
+      "checked": true
+    },
+    {
+      "value": "needsDocuments",
+      "label": "Я командировочный планктон и мне надо отчитаться",
+      "checked": false
+    }
+  ]
 
 }
