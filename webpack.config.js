@@ -26,15 +26,20 @@ module.exports = {
 				loader: 'babel',
 				include: includedDirectories
 			},
+			// {
+			// 	test: /\.tsx?$/,
+			// 	loader: 'babel!ts',
+			// 	include: path.join(__dirname, 'node_modules')
+			// },
 			{
 				test: /\.css$/,
-				loader: 'style!css',
+				loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[folder]__[local]__[hash:base64:5]',
 				include: includedDirectories
 
 			},
 			{
 				test: /\.less$/,
-				loader: 'style!css!less',
+				loader: 'style!css?modules&importLoaders=2&sourceMap&localIdentName=[folder]__[local]__[hash:base64:5]!less',
 				include: includedDirectories
 
 			},
@@ -61,7 +66,7 @@ module.exports = {
 
 	resolve: {
 		root: path.resolve('./'),
-		extensions: ['', '.js', '.jsx', '.css', '.less', '.json'],
+		extensions: ['', '.js', '.jsx', '.ts', '.tsx', '.css', '.less', '.json'],
 		modulesDirectories: ['node_modules', 'components']
 	},
 

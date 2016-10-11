@@ -1,0 +1,12 @@
+{
+  "lastName": "",
+  "firstName": "",
+  "email": "",
+  "mobile": "",
+
+  "checkboxes": {
+    "isSubscribedOnSms": true,
+    "needDocuments": true
+  }
+
+}
