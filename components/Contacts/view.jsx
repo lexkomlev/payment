@@ -16,6 +16,7 @@ export default view(({ model, dispatch }) => (
 			model={model.firstName}
 			dispatch={forwardTo(dispatch, 'FirstName')}
 		/>
+		<br />
 		{ model.checkboxes.map((checkbox, index) => (
 				<Checkbox
 					model={checkbox}
