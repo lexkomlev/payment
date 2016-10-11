@@ -1,9 +1,11 @@
 import React from 'react';
-import { view } from 'redux-elm';
+import { view, forwardTo } from 'redux-elm';
+
+import TripInfo from 'components/TripInfo/view';
 
 
 export default view(({ model, dispatch }) => (
     <div>
-        payment page
+        <TripInfo model={model.tripInfo} dispatch={forwardTo(dispatch, 'TripInfo')} />
     </div>
 ));

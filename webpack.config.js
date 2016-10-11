@@ -3,6 +3,8 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const includedDirectories = [path.join(__dirname, 'src'), path.join(__dirname, 'components')];
+
 
 module.exports = {
 	entry: [
@@ -22,37 +24,43 @@ module.exports = {
 			{
 				test: /\.jsx?$/,
 				loader: 'babel',
-				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
+				include: includedDirectories
 			},
 			{
 				test: /\.css$/,
 				loader: 'style!css',
-				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
+				include: includedDirectories
+
 			},
 			{
 				test: /\.less$/,
 				loader: 'style!css!less',
-				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
+				include: includedDirectories
+
 			},
 			{
 				test: /\.svg$/,
 				loader: 'svg-url',
-				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
+				include: includedDirectories
+
 			},
 			{
 				test: /\.(png|jpg|jpeg|gif)$/,
 				loader: "url",
-				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
+				include: includedDirectories
+
 			},
 			{
 				test: /\.json$/,
 				loader: 'json',
-				include: [path.join(__dirname, './src'), path.join(__dirname, './components')]
+				include: includedDirectories
+
 			}
 		]
 	},
 
 	resolve: {
+		root: path.resolve('./'),
 		extensions: ['', '.js', '.jsx', '.css', '.less', '.json'],
 		modulesDirectories: ['node_modules', 'components']
 	},

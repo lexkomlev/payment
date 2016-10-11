@@ -1,0 +1,22 @@
+[
+  {
+    "tripDepartureStationName": "",
+    "tripArrivalStationName": "",
+    "tripDepartureDate": "",
+    "tripDepartureTime": "",
+    "showDepartureTimezone": false,
+    "tripArrivalDate": "",
+    "tripArrivalTime": "",
+    "showArrivalTimezone": false,
+    "tripTravelTime": 0,
+    "trainName": null,
+    "trainNumber": "",
+    "trainDepartureCityName": "",
+    "trainArrivalCityName": "",
+    "showCarInfo": true,
+    "carInfo": "",
+    "seatsInfo": "",
+    "hasEregInfo": true,
+    "isEregPossible": true
+  }
+]

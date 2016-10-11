@@ -1,6 +1,13 @@
 import { Updater } from 'redux-elm';
+import * as initialState from './initialState';
 
-const initialModel = 0;
+import { init as tripInfoInit } from 'components/TripInfo/updater';
 
-export default new Updater(initialModel)
+
+export const init = (state = initialState) => ({
+	tripInfo: tripInfoInit(state.tripInfo)
+});
+
+
+export default new Updater(init())
   .toReducer();
