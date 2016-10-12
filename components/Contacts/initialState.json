@@ -3,18 +3,5 @@
   "firstName": "",
   "email": "",
   "mobile": "",
-
-  "checkboxes": [
-    {
-      "value": "isSubscribedOnSms",
-      "label": "Я подписан на смс без регистрации",
-      "checked": true
-    },
-    {
-      "value": "needsDocuments",
-      "label": "Я командировочный планктон и мне надо отчитаться",
-      "checked": false
-    }
-  ]
-
+  "checkboxes": []
 }

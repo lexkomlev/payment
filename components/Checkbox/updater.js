@@ -5,7 +5,7 @@ import { CHANGE } from './actions';
 
 
 
-export const init = (state = initialState) => state;
+export const init = (state = {}) => ({ ...initialState, ...state});
 
 export default new Updater(init())
 	.case(CHANGE, (model, { payload }) => ({ ...model, checked: payload }))

@@ -21,47 +21,30 @@
       "isEregPossible": true
     }
   ],
-  "toReadLinks": {
-    "titleText": "Справочная",
-    "links": [
+  "contacts": {
+    "lastName": "",
+    "firstName": "",
+    "email": "",
+    "mobile": "",
+
+    "checkboxes": [
       {
-        "url": "http://www.tutu.ru/2read/catalog/poezda_faq/item/trains_instruction/",
-        "text": "Инструкция по приобретению билетов"
+        "value": "isSubscribedOnSms",
+        "label": "Я подписан на смс без регистрации",
+        "checked": true
       },
       {
-        "url": "http://www.tutu.ru/2read/catalog/poezda_faq/item/trains_payment/",
-        "text": "Способы оплаты"
+        "value": "needsDocuments",
+        "label": "Я командировочный планктон и мне надо отчитаться",
+        "checked": false
       },
       {
-        "url": "http://www.tutu.ru/2read/catalog/poezda_faq/item/trains_rules/",
-        "text": "Правила работы сервиса"
+        "value": "needsDocumentsASd",
+        "label": "Я командировочный планктон и мне надо отчитаться",
+        "checked": false
       }
-    ],
-    "enabled": true
-  },
-  "notifications": {
-    "errors": [],
-    "warnings": []
-  },
-  "userContacts": {
-    "data": {
-      "enabled": true,
-      "firstName": null,
-      "lastName": null,
-      "email": "shuranov@tutu.ru",
-      "mobileNumber": "",
-      "isEmailRequired": true,
-      "showMobileKeyboard": false,
-      "isSubscribedOnSms": true,
-      "documentDescriptionLink": "http://www.tutu.ru/2read/poezda/documents_for_travel/",
-      "isB2BClient": false
-    },
-    "viewParams": []
-  },
-  "promocode": {
-    "canEnterPromoCode": false,
-    "needHidePromoCodeInput": true,
-    "promoCode": null
+    ]
+
   },
   "paymentSelect": {
     "enabled": true,
@@ -115,58 +98,5 @@
       "qiwi": "http://www.tutu.ru/2read/trains_payment/qiwi_wallet/",
       "yandex_phone": "http://www.tutu.ru/2read/pokupka_bileta/trains_payment_mobile/"
     }
-  },
-  "paperTicketInformation": {
-    "enabled": true,
-    "link": "http://www.tutu.ru/2read/trains_payment/without_card/",
-    "text": "Я&nbsp;хочу купить бумажный билет. Как его получить?"
-  },
-  "eregistration": [
-    {
-      "enabled": true,
-      "status": true,
-      "popup": "<p>Вам не&nbsp;нужно ехать за&nbsp;бумажным билетом на&nbsp;вокзал. Для посадки в&nbsp;поезд достаточно удостоверения личности и&nbsp;посадочного купона. Купон будет доступен сразу после оплаты, его можно распечатать или сохранить на&nbsp;телефон. \n\t\t\t\t\t\t\t\tНекоторые проводники купон не&nbsp;требуют, но&nbsp;лучше не&nbsp;рисковать.</p>\n\t\t\t\t\t\t\t<p>Если вам нужен билет на&nbsp;бланке, снимите галочку.</p>"
-    }
-  ],
-  "reminderData": {
-    "enabled": true,
-    "text": "По&nbsp;правилам оформления билетов резерв будет действовать 15&nbsp;минут"
-  },
-  "paywaySelectDisabled": {
-    "enabled": false,
-    "aviaUrl": null,
-    "text": null
-  },
-  "currencies": {
-    "primary": "RUB"
-  },
-  "nextStepButton": {
-    "showButton": true,
-    "stepsToFinish": 1
-  },
-  "ticketsOnlyInRussia": {
-    "enabled": true
-  },
-  "eticketOnlyInRussiaAlert": {
-    "enabled": false,
-    "title": "Электронный билет можно получить только в России",
-    "text": "<p class=\"text\">По&nbsp;правилам РЖД, получение электронных билетов возможно только на&nbsp;территории России.\n\t\t\t\t\t\t\t\t\t\tДля данного поезда доступна электронная регистрация.</p>"
-  },
-  "somePaywaysDisabled": {
-    "enabled": false
-  },
-  "emailDomainAttention": {
-    "fromDomain": "gmail.ru",
-    "toDomain": "gmail.com"
-  },
-  "tracePixel": {
-    "url": "/poezda/oplata_render_end/1822cc8/dot.gif?1828323585"
-  },
-  "securePayment": {
-    "showTutuTravelLabel": false
-  },
-  "rzdBonus": {
-    "enabled": true,
-    "cardNumber": ""
   }
 }

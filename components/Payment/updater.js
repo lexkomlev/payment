@@ -3,14 +3,17 @@ import * as initialState from './initialState';
 
 import { init as tripInfoInit } from 'components/TripInfo/updater';
 import Contacts, { init as contactsInit } from 'components/Contacts/updater';
+import PaymentSelect, { init as paymentSelectInit } from 'components/PaymentSelect/updater';
 
 
 export const init = (state = initialState) => ({
 	tripInfo: tripInfoInit(state.tripInfo),
-	contacts: contactsInit()
+	contacts: contactsInit(state.contacts),
+	paymentSelect: paymentSelectInit(state.contacts)
 });
 
 
 export default new Updater(init())
 	.case('Contacts', (model, action) => ({...model, contacts: Contacts(model.contacts, action)}))
+	.case('PaymentSelect', (model, action) => ({...model, paymentSelect: PaymentSelect(model.paymentSelect, action)}))
 	.toReducer();
