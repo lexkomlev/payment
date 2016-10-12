@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "selectedPayway": "card",
+  "paywayList": [
+    {
+      "name": "card",
+      "price": {
+        "original": 450,
+        "RUB": "450"
+      }
+    }
+  ]
+}

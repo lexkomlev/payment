@@ -46,7 +46,7 @@
     ]
 
   },
-  "paymentSelect": {
+  "paywaySelect": {
     "enabled": true,
     "selectedPayway": "card",
     "paywayList": [
