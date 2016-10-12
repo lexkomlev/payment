@@ -1,4 +1,4 @@
-import { Updater, Matchers } from 'redux-elm';
+import { Updater } from 'redux-elm';
 import * as initialState from './initialState';
 
 import Payway from './__payway/updater';
