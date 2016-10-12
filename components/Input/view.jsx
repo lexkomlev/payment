@@ -7,13 +7,10 @@ import { change } from './actions';
 
 
 
-export default view( (props) => {
-	const { model, dispatch, ...rest } = props;
-	return (
-		<Input
-			{ ...rest }
-			value={model}
-			onChange={ (e) => { dispatch(change(e.target.value)) } }
-		/>
-	)
-});
+export default view( ({ model, dispatch, ...rest }) => (
+	<Input
+		{ ...rest }
+		value={model}
+		onChange={ (e) => { dispatch(change(e.target.value)) } }
+	/>
+) );

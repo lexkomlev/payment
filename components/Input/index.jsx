@@ -2,15 +2,12 @@
 import React from 'react';
 
 
-const Input = (props) => {
-	const { modifier, ...rest } = props;
-	return (
-		<input
-			{ ...rest }
-			className={`b-input__standart ${modifier}`}
-		/>
-	);
-};
+const Input = ({ modifier, ...rest }) => (
+	<input
+		{ ...rest }
+		className={`b-input__standart ${modifier}`}
+	/>
+);
 
 
 Input.defaultProps  = {
