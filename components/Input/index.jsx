@@ -2,23 +2,19 @@
 import React from 'react';
 
 
-class Input extends React.Component {
-	render () {
-		return <input
-			type={this.props.type}
-			className={`b-input__standart ${this.props.modificator}`}
-			value={this.props.value}
-			placeholder={this.props.placeholder}
-			onChange={this.props.onChange}
-			onBlur={this.props.onBlur}
-			onFocus={this.props.onFocus}
-			onKeyDown={this.props.onKeyDown}
-		/>;
-	}
-}
+const Input = (props) => {
+	const { modifier, ...rest } = props;
+	return (
+		<input
+			{ ...rest }
+			className={`b-input__standart ${modifier}`}
+		/>
+	);
+};
+
 
 Input.defaultProps  = {
-	modificator: '',
+	modifier: '',
 	placeholder: '',
 	type: 'text',
 	value: '',
@@ -27,5 +23,6 @@ Input.defaultProps  = {
 	onFocus: () => {},
 	onKeyDown: () => {}
 };
+
 
 export default Input;
