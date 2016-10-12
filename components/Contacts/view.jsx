@@ -20,8 +20,8 @@ export default view(({ model, dispatch }) => (
 		{ model.checkboxes.map((checkbox, index) => (
 				<Checkbox
 					model={checkbox}
-					dispatch={forwardTo(dispatch, 'Checkboxes')}
-					key={`checkbox_${index}`}
+					dispatch={forwardTo(dispatch, 'Checkbox', checkbox.value)}
+					key={`checkbox_${checkbox.value}`}
 				/>
 			)
 		) }
