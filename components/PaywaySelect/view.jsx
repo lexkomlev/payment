@@ -12,6 +12,7 @@ export default view( ({ model, dispatch }) => (
 			<Payway
 				model={payway.name}
 				dispatch={forwardTo(dispatch, 'Payway')}
+				key={`payway_${payway.name}`}
 			/>
 		)) }
 
