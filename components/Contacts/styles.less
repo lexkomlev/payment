@@ -1,0 +1,42 @@
+@import (reference) '~tutu-styles/src/typography';
+
+.title {
+	.t-ttl();
+	display: block;
+}
+
+.formRow {
+	display: block;
+}
+
+
+.inputWrapper {
+	display: inline-block;
+	margin: 12px 12px 0 0;
+
+	&Wide {
+		width: 100%;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.inputLabel {
+	.t-txt-s();
+	display: block;
+	margin-bottom: 3px;
+}
+
+
+.hint {
+	.t-txt-s();
+	.t-gray();
+	display: block;
+
+	&Inline {
+		display: inline-block;
+		margin-left: 8px;
+	}
+}

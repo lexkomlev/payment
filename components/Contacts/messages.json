@@ -1,0 +1,22 @@
+{
+  "lastName": {
+	"id": "Contacts.lastName",
+	"defaultMessage": "Фамилия",
+	"description": "Placeholder фамилии"
+  },
+  "lastNameError": {
+	"id": "Contacts.lastNameError",
+	"defaultMessage": "Пожалуйста, введите фамилию",
+	"description": "Ошибка при валидации фамилии"
+  },
+  "firstName": {
+	"id": "Contacts.firstName",
+	"defaultMessage": "Имя",
+	"description": "Placeholder имени"
+  },
+  "firstNameError": {
+	"id": "Contacts.firstNameError",
+	"defaultMessage": "Пожалуйста, введите имя",
+	"description": "Ошибка при валидации имени"
+  }
+}

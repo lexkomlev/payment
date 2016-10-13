@@ -5,7 +5,7 @@ import Input from 'components/Input/view';
 
 
 
-export default view( ( { model, dispatch, ...rest } ) => {
+export default view( ( { model, dispatch, errorMessage, ...rest } ) => {
 	const showInvalid = model.underValidation && !model.isValid;
 	return (
 		<div>
@@ -15,7 +15,7 @@ export default view( ( { model, dispatch, ...rest } ) => {
 				model={model.value}
 				dispatch={forwardTo(dispatch, 'Input')}
 			/>
-			{ showInvalid && <span style={{color: "red"}}>This input in invalid (instead of popup)</span> }
+			{ showInvalid && <div style={{color: "red", width: "20px", whiteSpace: "nowrap", visibility: "visible"}}>{errorMessage}</div> }
 		</div>
 	)
 });

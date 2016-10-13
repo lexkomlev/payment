@@ -1,25 +1,20 @@
+import styles from './styles';
+
 import React from 'react';
 import { view, forwardTo } from 'redux-elm';
+
+import { defineMessages, injectIntl, FormattedMessage } from 'react-intl';
+import * as messagesObj from './messages';
+
+import testAttribute from 'src/utils/autotest';
+
 
 import ValidatedInput from './__validatedInput/view';
 import Checkbox from 'components/Checkbox/view';
 
-import { defineMessages, injectIntl } from 'react-intl';
 
 
-
-const messages = defineMessages({
-	lastName: {
-		id: 'Contacts.lastName',
-		defaultMessage: 'Фамилия',
-		description: 'Placeholder фамилии',
-	},
-	firstName: {
-		id: 'Contacts.firstName',
-		defaultMessage: 'Имя',
-		description: 'Placeholder имени',
-	}
-});
+const messages = defineMessages(messagesObj);
 
 
 
@@ -28,17 +23,37 @@ const Component = ( props ) => {
 		{ model, dispatch } = props;
 	return (
 		<div>
-			<ValidatedInput
-				model={model.lastName}
-				dispatch={forwardTo(dispatch, 'LastName')}
-				placeholder={formatMessage(messages.lastName)}
-			/>
-			<ValidatedInput
-				model={model.firstName}
-				dispatch={forwardTo(dispatch, 'FirstName')}
-				placeholder={formatMessage(messages.firstName)}
-			/>
+
+			<label className={styles.inputWrapper} {...testAttribute('contacts_last_name')}>
+				<span className={styles.inputLabel}>
+					<FormattedMessage  { ...messages.lastName } />
+				</span>
+				<ValidatedInput
+					model={model.lastName}
+					dispatch={forwardTo(dispatch, 'LastName')}
+					errorMessage={formatMessage(messages.lastNameError)}
+					name={formatMessage(messages.lastName)}
+					tabIndex="1"
+				/>
+			</label>
+
+
+			<label className={styles.inputWrapper} {...testAttribute('contacts_first_name')}>
+				<span className={styles.inputLabel}>
+					<FormattedMessage  { ...messages.firstName } />
+				</span>
+				<ValidatedInput
+					model={model.firstName}
+					dispatch={forwardTo(dispatch, 'FirstName')}
+					errorMessage={formatMessage(messages.firstNameError)}
+					name={formatMessage(messages.firstName)}
+					tabIndex="2"
+				/>
+			</label>
+
 			<br />
+
+
 			{ model.checkboxes.map((checkbox, index) => (
 					<Checkbox
 						model={checkbox}
