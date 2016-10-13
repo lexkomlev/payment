@@ -3,7 +3,10 @@
 const path = require('path');
 const webpack = require('webpack');
 
-const includedDirectories = [path.join(__dirname, 'src'), path.join(__dirname, 'components')];
+const includedDirectories = [
+	path.join(__dirname, 'src'),
+	path.join(__dirname, 'components')
+];
 
 
 module.exports = {
@@ -67,7 +70,7 @@ module.exports = {
 	resolve: {
 		root: path.resolve('./'),
 		extensions: ['', '.js', '.jsx', '.ts', '.tsx', '.css', '.less', '.json'],
-		modulesDirectories: ['node_modules', 'components']
+		modulesDirectories: ['node_modules', 'components', 'styles']
 	},
 
 	plugins: [
