@@ -22,10 +22,10 @@
     }
   ],
   "contacts": {
-    "lastName": "",
-    "firstName": "",
-    "email": "",
-    "mobile": "",
+    "lastName": {},
+    "firstName": {},
+    "email": {},
+    "mobile": {},
 
     "checkboxes": [
       {

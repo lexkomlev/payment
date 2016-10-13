@@ -1,7 +1,7 @@
 import React from 'react';
 import { view, forwardTo } from 'redux-elm';
 
-import Input from 'components/Input/view';
+import ValidatedInput from './__validatedInput/view';
 import Checkbox from 'components/Checkbox/view';
 
 import { defineMessages, injectIntl } from 'react-intl';
@@ -28,12 +28,12 @@ const Component = ( props ) => {
 		{ model, dispatch } = props;
 	return (
 		<div>
-			<Input
+			<ValidatedInput
 				model={model.lastName}
 				dispatch={forwardTo(dispatch, 'LastName')}
 				placeholder={formatMessage(messages.lastName)}
 			/>
-			<Input
+			<ValidatedInput
 				model={model.firstName}
 				dispatch={forwardTo(dispatch, 'FirstName')}
 				placeholder={formatMessage(messages.firstName)}

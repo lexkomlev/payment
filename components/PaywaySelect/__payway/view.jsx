@@ -12,20 +12,20 @@ import EurosetContent from '../__content/euroset'
 
 class Payway extends React.Component {
 
-	getContentComponent (payway) {
+	getContentComponent (payway, props) {
 		switch (payway) {
 			case 'card':
-				return <CardContent />;
+				return <CardContent {...props} />;
 			default:
-				return <EurosetContent />;
+				return <EurosetContent {...props} />;
 		}
 	}
 
 	render () {
-		const { model, dispatch } = this.props;
+		const { model, dispatch, onSubmit } = this.props;
 		return (
 			<div className={styles.wrapper} onClick={ () => {dispatch(click(model))} }>
-				{this.getContentComponent(model)}
+				{ this.getContentComponent(model, {onSubmit: onSubmit}) }
 			</div>
 		)
 	}

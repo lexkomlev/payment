@@ -4,7 +4,7 @@ import { view, forwardTo } from 'redux-elm';
 import Payway from './__payway/view';
 
 
-export default view( ({ model, dispatch }) => (
+export default view( ({ model, dispatch, onSubmit }) => (
 	<div>
 		<div>Selected payway: {model.selectedPayway}</div>
 
@@ -13,6 +13,7 @@ export default view( ({ model, dispatch }) => (
 				model={payway.name}
 				dispatch={forwardTo(dispatch, 'Payway')}
 				key={`payway_${payway.name}`}
+				onSubmit={onSubmit}
 			/>
 		)) }
 

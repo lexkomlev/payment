@@ -6,7 +6,7 @@ import PayLogos from '../../PayLogos';
 import { FormattedMessage } from 'react-intl';
 
 
-export default () => {
+export default ({onSubmit}) => {
 	return (
 		<div>
 			<div>
@@ -27,6 +27,10 @@ export default () => {
 						visaelectron: <PayLogos logos={["visaelectron"]} />
 					}}
 				/>
+				<button onClick={ (e) => {
+					e.stopPropagation();
+					onSubmit();
+				} }>Submit</button>
 			</div>
 		</div>
 	);
