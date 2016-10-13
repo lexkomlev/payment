@@ -1,11 +1,11 @@
-// import styles from './styles';
+import styles from './styles';
 import React from 'react';
 
 
 const Input = ({ modifier, ...rest }) => (
 	<input
 		{ ...rest }
-		className={`b-input__standart ${modifier}`}
+		className={`${styles.standart} ${!!modifier ? styles[modifier] : ''}`}
 	/>
 );
 
